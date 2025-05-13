@@ -1,0 +1,15 @@
+git config --global user.name name
+git config --global user.email email
+
+Criar um projeto anglar:
+ng new galloflix
+
+cd galloflix
+
+ng serve -o
+
+Criar um componente
+ng g c pages/home
+
+Criar um servico
+ng g s services/movieApi
