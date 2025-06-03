@@ -37,4 +37,19 @@ export class MovieApiService {
   popularActionMovieApiData(): Observable<any> {
     return this.http.get(`${this.baseUrl}/discover/movie?language=pt-br&with_genres=28&sort_by=popularity.desc`, this.options);
   }
+
+  // --- Área de Detalhes
+  // Buscar Detalhes da Mídia
+  mediaDetails(type: any, value: any): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${type}/${value}?language=pt-br`, this.options);
+  }
+  // Buscar os Trailers da Mídia
+  mediaTrailers(type: any, value: any): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${type}/${value}/videos?language=pt-br`, this.options);
+  }
+  // Buscar o Elenco da Mídia
+  mediaCast(type: any, value: any): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${type}/${value}/credits?language=pt-br`, this.options);
+  }
 }
+
